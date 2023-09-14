@@ -12,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--main-font);
+  font-family: var(--secondary-font);
 }
 
 body,
@@ -24,7 +24,6 @@ html {
 header {
   padding: 15px 35px 15px 35px;
   min-height: 50px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -140,6 +139,25 @@ header {
   min-height: 18.5px;
 }
 
+.section-1 {
+  width: 100vw;
+  background-color: var(--section-bg);
+  position: relative;
+  isolation: isolate;
+}
+
+.section-1::after {
+  z-index: -1;
+  background-image: url('/assets/leaves-free-img.png');
+  background-repeat: no-repeat;
+  background-size: 28%;
+  background-position: right bottom;
+  position: absolute;
+  inset: 0;
+  opacity: 0.25;
+  content: '';
+}
+
 .main-section {
   display: flex;
   justify-content: center;
@@ -152,7 +170,7 @@ header {
 }
 
 .main-section-img {
-  width: 50.75%;
+  width: 50%;
 }
 
 .main-img {
@@ -160,26 +178,43 @@ header {
 }
 
 .populated {
-  width: 50.75%;
+  width: 50%;
+  height: auto;
   padding-left: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.leaf-icon {
+  margin-bottom: 20px;
 }
 
 .main-h5 {
   font-family: var(--main-font);
+  font-size: 17px;
+  margin-bottom: 15px;
 }
 
 .main-h1 {
   font-family: var(--main-font);
   font-size: 3.5rem;
+  margin-bottom: 20px;
 }
 
 .main-p {
-  font-family: var(--secondary-font);
+  font-size: 16px;
 }
 
 .main-btn-area {
+  margin-top: 50px;
+  /* width: 100px; */
+  text-align: left;
 }
 
 .shop-btn {
   text-decoration: none;
+
+  padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--green-darker);
 }
